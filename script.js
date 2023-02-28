@@ -44,6 +44,9 @@ const quarter = getQuarter(date);
 console.log(quarter);
 
 // Write a function to calculate date diff
+const start = Date.now();
+const map = new Map();
+
 function getDateDiff(date1, date2) {
   const diffInMs = Math.abs(date2 - date1);
   const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
@@ -62,6 +65,9 @@ const date2 = new Date('2023-03-01T15:30:00');
 const diff = getDateDiff(date1, date2);
 console.log(diff); 
 
+const end = Date.now();
+console.log("execute time =>", end - start);
+console.log(map);
 // Create a map
 const arr = [
 { id: 1, value: 1, date: "2022-02-15" },
